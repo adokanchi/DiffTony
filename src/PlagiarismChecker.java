@@ -21,10 +21,7 @@ public class PlagiarismChecker {
 
         for (int i = 1; i <= n1; i++) {
             for (int j = 1; j <= n2; j++) {
-                // Compute dp[i][j]
-
-                // We are trying to add the jth character of doc2
-                char target = doc2.charAt(j);
+                char target = doc2.charAt(j - 1);
 
                 int idx = -1;
                 for (int k = i - 1; k >= 0; k--) {
@@ -33,7 +30,7 @@ public class PlagiarismChecker {
                         break;
                     }
                 }
-                if (idx != -1) dp[i][j] = Math.max(dp[i][j - 1], 1 + dp[idx - 1][j - 1]);
+                if (idx != -1) dp[i][j] = Math.max(dp[i][j - 1], 1 + dp[idx][j - 1]);
             }
         }
 
