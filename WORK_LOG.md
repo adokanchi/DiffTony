@@ -1,9 +1,10 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date    |     Time      |                                                                                                                                                                                                                                                                                                                             Update |
+|:--------|:-------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| April 5 |    9-10pm     |                                                                                                                                                                                                                                                                                         I tried to write abstract, efficient code. |
+| Feb 24  | 11:15-11:55am | In-class discussions about algorithm design. Worked with Isha and settled on a tabulation algorithm where, when choosing to add a letter, we consider both including and excluding that letter. Excluding the letter doesn't change the max length, and including the letter involves looking at a smaller version of the problem. |
+| Feb 24  |   9:30-9:45   |                                                                                                                                Coded what I think is the approach we talked about in class. Did it on a different machine where I haven't set up the tests, so just committing now so I can pull from my laptop and run the tests. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
