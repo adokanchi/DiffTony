@@ -21,16 +21,23 @@ public class PlagiarismChecker {
 
         for (int i = 1; i <= n1; i++) {
             for (int j = 1; j <= n2; j++) {
+
                 char target = doc2.charAt(j - 1);
 
-                int idx = -1;
+                int targetIdx = -1;
                 for (int k = i - 1; k >= 0; k--) {
-                    if (doc2.charAt(k) == target) {
-                        idx = k;
+                    if (doc1.charAt(k) == target) {
+                        targetIdx = k;
                         break;
                     }
                 }
-                if (idx != -1) dp[i][j] = Math.max(dp[i][j - 1], 1 + dp[idx][j - 1]);
+
+                if (targetIdx == -1) {
+                    dp[i][j] = dp[i][j-1];
+                }
+                else {
+                    dp[i][j] = Math.max(dp[i][j - 1], 1 + dp[targetIdx][j - 1]);
+                }
             }
         }
 
